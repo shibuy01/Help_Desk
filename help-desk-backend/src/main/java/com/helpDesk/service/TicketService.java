@@ -15,4 +15,6 @@ public interface TicketService {
     List<Ticket> findAll();
 
     Ticket updateTicket(Ticket ticket);
+
+    Ticket getTicketByUsername(String username);
 }

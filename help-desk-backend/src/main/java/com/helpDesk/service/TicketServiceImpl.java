@@ -42,4 +42,9 @@ public class TicketServiceImpl implements TicketService {
     public Ticket updateTicket(Ticket ticket) {
         return ticketRepository.save(ticket);
     }
+
+    @Override
+    public Ticket getTicketByUsername(String username) {
+        return this.ticketRepository.findByUsername(username);
+    }
 }
