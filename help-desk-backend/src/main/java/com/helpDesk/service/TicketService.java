@@ -10,7 +10,7 @@ public interface TicketService {
 
     Ticket findById(long id);
 
-    Void deleteById(long id);
+    void deleteById(long id);
 
     List<Ticket> findAll();
 

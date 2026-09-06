@@ -15,27 +15,31 @@ public class TicketServiceImpl implements TicketService {
 
     @Override
     public Ticket addTicket(Ticket ticket) {
-        return this.ticketRepository.save(ticket);
+        return ticketRepository.save(ticket);
     }
 
     @Override
     public Ticket findById(long id) {
-        return this.ticketRepository.findById(id).orElseThrow(()-> new RuntimeException("Ticket not Foound"));;
+        return ticketRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Ticket not found with id: " + id));
     }
 
     @Override
-    public Void deleteById(long id) {
-        this.ticketRepository.deleteById(id);
-        return null;
+    public void deleteById(long id) {
+        if (!ticketRepository.existsById(id)) {
+            throw new RuntimeException("Ticket not found with id: " + id);
+        }
+
+        ticketRepository.deleteById(id);
     }
 
     @Override
     public List<Ticket> findAll() {
-        return this.ticketRepository.findAll();
+        return ticketRepository.findAll();
     }
 
     @Override
     public Ticket updateTicket(Ticket ticket) {
-        return this.ticketRepository.save(ticket);
+        return ticketRepository.save(ticket);
     }
 }
