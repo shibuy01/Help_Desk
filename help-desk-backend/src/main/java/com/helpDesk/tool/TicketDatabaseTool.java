@@ -30,4 +30,10 @@ public class TicketDatabaseTool {
     public Ticket updateTicket(@ToolParam(description = "new ticket details with ticket id")  Ticket ticket){
         return ticketService.updateTicket(ticket);
     }
+    
+    // get current date and time
+    @Tool(description = "This tool helps to get current system time.")
+    public String getDateAndTime(){
+        return String.valueOf(System.currentTimeMillis());
+    }
 }
