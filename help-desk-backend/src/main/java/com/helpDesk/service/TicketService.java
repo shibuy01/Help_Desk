@@ -16,5 +16,5 @@ public interface TicketService {
 
     Ticket updateTicket(Ticket ticket);
 
-    Ticket getTicketByUsername(String username);
+    Ticket getTicketByEmail(String email);
 }

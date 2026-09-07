@@ -31,7 +31,7 @@ public class Ticket {
     private String description;
 
     @Column(unique = true)
-    private String username;
+    private String email;
 
     private LocalDateTime createdOn;
     private LocalDateTime updatedOn;

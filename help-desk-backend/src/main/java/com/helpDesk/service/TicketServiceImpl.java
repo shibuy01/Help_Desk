@@ -15,6 +15,7 @@ public class TicketServiceImpl implements TicketService {
 
     @Override
     public Ticket addTicket(Ticket ticket) {
+        ticket.setId(null);
         return ticketRepository.save(ticket);
     }
 
@@ -44,7 +45,7 @@ public class TicketServiceImpl implements TicketService {
     }
 
     @Override
-    public Ticket getTicketByUsername(String username) {
-        return this.ticketRepository.findByUsername(username);
+    public Ticket getTicketByEmail(String email) {
+        return this.ticketRepository.findByEmail(email);
     }
 }

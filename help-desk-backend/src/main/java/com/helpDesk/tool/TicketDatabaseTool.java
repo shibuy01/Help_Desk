@@ -15,14 +15,19 @@ public class TicketDatabaseTool {
 
     // Create ticket tool
     @Tool(description = "This tool help to create new ticket in database.")
-    public Ticket createTicketTool(@ToolParam(description = "Ticket details") Ticket ticket) {
-        return ticketService.addTicket(ticket);
+    public Ticket createTicketTool(@ToolParam(description = "Ticket field required to create new ticket") Ticket ticket) {
+        try {
+            return ticketService.addTicket(ticket);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    // get ticket using username
-    @Tool(description = "This tool helps to get ticket by username.")
-    public Ticket getTicketByUsername(@ToolParam(description = "username whoose ticket is required") String username){
-        return ticketService.getTicketByUsername(username);
+    // get ticket using email
+    @Tool(description = "This tool helps to get ticket by email.")
+    public Ticket getTicketByEmail(@ToolParam(description = "email whose ticket is required") String email){
+        return ticketService.getTicketByEmail(email);
     }
 
     // update ticket
