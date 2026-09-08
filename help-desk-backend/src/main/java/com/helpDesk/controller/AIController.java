@@ -13,7 +13,7 @@ public class AIController {
     private final AiService aiService;
 
     @PostMapping
-    public ResponseEntity<String> getResponse(@RequestBody String query, @RequestParam("ConversationId") String ConversationId) {
+    public ResponseEntity<String> getResponse(@RequestBody String query, @RequestHeader("ConversationId") String ConversationId) {
         return ResponseEntity.ok(aiService.getResponseFromAssistant(ConversationId, query));
     }
 }
