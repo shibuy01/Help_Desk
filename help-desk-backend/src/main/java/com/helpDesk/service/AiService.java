@@ -28,8 +28,11 @@ public class AiService {
     public String getResponseFromAssistant(String query, String ConversationId) {
         return this.chatClient
                 .prompt()
-                .advisors(advisorSpec -> advisorSpec.param(ChatMemory.CONVERSATION_ID, ConversationId))
-                // tools infomation
+                .advisors(advisorSpec ->
+                        advisorSpec.param(
+                                ChatMemory.CONVERSATION_ID,
+                                ConversationId
+                        ))
                 .tools(ticketDatabaseTool, emailTool)
                 .system(systemPromptResource)
                 .user(query)
@@ -41,7 +44,11 @@ public class AiService {
     public Flux<String> streamResponseFromAssistant(String query, @RequestHeader("ConversationId") String ConversationId) {
         return this.chatClient
                 .prompt()
-                .advisors(advisorSpec -> advisorSpec.param(ChatMemory.CONVERSATION_ID, ConversationId))
+                .advisors(advisorSpec ->
+                        advisorSpec.param(
+                                ChatMemory.CONVERSATION_ID,
+                                ConversationId
+                        ))
                 .tools(ticketDatabaseTool, emailTool)
                 .system(systemPromptResource)
                 .user(query)

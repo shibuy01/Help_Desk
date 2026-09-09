@@ -1,5 +1,7 @@
 package com.helpDesk.tool;
 
+import com.helpDesk.dto.CreateTicketRequest;
+import com.helpDesk.entity.Priority;
 import com.helpDesk.entity.Ticket;
 import com.helpDesk.service.TicketService;
 import lombok.RequiredArgsConstructor;
@@ -14,14 +16,25 @@ public class TicketDatabaseTool {
     private final TicketService ticketService;
 
     // Create ticket tool
-    @Tool(description = "This tool help to create new ticket in database.")
-    public Ticket createTicketTool(@ToolParam(description = "Ticket field required to create new ticket") Ticket ticket) {
-        try {
-            return ticketService.addTicket(ticket);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+    @Tool(description = "Create a new ticket in the database.")
+    public Ticket createTicketTool(
+            @ToolParam(description = "Information required to create a new ticket")
+            CreateTicketRequest request) {
+
+        Ticket ticket = new Ticket();
+
+        ticket.setSummary(request.summary());
+        ticket.setDescription(request.description());
+        ticket.setEmail(request.email());
+        ticket.setCategory(request.category());
+
+        if (request.priority() != null) {
+            ticket.setPriority(
+                    Priority.valueOf(request.priority().toUpperCase())
+            );
         }
+
+        return ticketService.addTicket(ticket);
     }
 
     // get ticket using email
@@ -37,8 +50,8 @@ public class TicketDatabaseTool {
     }
     
     // get current date and time
-    @Tool(description = "This tool helps to get current system time.")
-    public String getDateAndTime(){
-        return String.valueOf(System.currentTimeMillis());
+    @Tool(description = "Get the current date and time.")
+    public String getDateAndTime() {
+        return java.time.LocalDateTime.now().toString();
     }
 }

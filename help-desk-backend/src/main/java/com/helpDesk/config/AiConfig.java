@@ -20,7 +20,7 @@ public class AiConfig {
 
         ChatMemory chatMemory = MessageWindowChatMemory.builder()
                 .chatMemoryRepository(jdbcChatMemoryRepository)
-                .maxMessages(10)
+                .maxMessages(50)
                 .build();
 
         logger.info("ChatClient bean created.");
