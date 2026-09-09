@@ -9,6 +9,9 @@ import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestHeader;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
@@ -33,4 +36,17 @@ public class AiService {
                 .call()
                 .content();
     }
+
+
+    public Flux<String> streamResponseFromAssistant(String query, @RequestHeader("ConversationId") String ConversationId) {
+        return this.chatClient
+                .prompt()
+                .advisors(advisorSpec -> advisorSpec.param(ChatMemory.CONVERSATION_ID, ConversationId))
+                .tools(ticketDatabaseTool, emailTool)
+                .system(systemPromptResource)
+                .user(query)
+                .stream()
+                .content();
+    }
+
 }

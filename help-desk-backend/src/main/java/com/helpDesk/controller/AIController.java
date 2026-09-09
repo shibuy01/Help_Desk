@@ -4,9 +4,11 @@ import com.helpDesk.service.AiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("api/v1/ai")
+@RequestMapping("api/v1/helpdesk")
 @RequiredArgsConstructor
 public class AIController {
 
@@ -16,4 +18,10 @@ public class AIController {
     public ResponseEntity<String> getResponse(@RequestBody String query, @RequestHeader("ConversationId") String ConversationId) {
         return ResponseEntity.ok(aiService.getResponseFromAssistant(ConversationId, query));
     }
+
+    @PostMapping("/stream")
+    public Flux<String> streamResponse(@RequestBody String query, @RequestHeader("ConversationId") String ConversationId) {
+        return this.aiService.streamResponseFromAssistant(ConversationId, query);
+    }
+
 }
