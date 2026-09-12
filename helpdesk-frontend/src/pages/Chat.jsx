@@ -2,11 +2,12 @@
 import { Button, Input } from "@base-ui/react";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { MoreVertical, Plus, Search, Send } from "lucide-react";
+import { LogOut, MoreVertical, Plus, Search, Send } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import MessageBubble from "../components/ui/MessageBubble";
 import { sendMessagesToServer } from "../services/chat.service";
 import { v4 as v444 } from "uuid";
+import { useNavigate } from "react-router";
 
 const CHATS = [
     {
@@ -62,6 +63,7 @@ function Chat() {
     const [sending, setSending] = useState(false);
     const [conversationId, setConversationId] = useState("");
     const inputRef = useRef(null);
+    const navigate = useNavigate();
 
     // Create conversation ID only once
     useEffect(() => {
@@ -138,6 +140,10 @@ function Chat() {
         }
     }
 
+    function handleLogOut(){
+        navigate("/")
+    }
+
     return (
         <div className="fixed top-0 right-0 left-0 mx-auto min-h-screen max-w-7xl grid grid-cols-1 md:grid-cols-[300px_minmax(0,1fr)] border-x">
 
@@ -169,6 +175,7 @@ function Chat() {
                     </div>
 
                     <Separator />
+                
                 </aside>
             </div>
 
@@ -198,11 +205,12 @@ function Chat() {
 
                         <div>
                             <Button
+                                onClick={handleLogOut}
                                 variant="ghost"
                                 size="icon"
                                 className="h-8 w-8"
                             >
-                                <Search className="h-4 w-4" />
+                                <LogOut className="h-4 w-4" />
                             </Button>
 
                             <Button
