@@ -17,6 +17,13 @@ const CHATS = [
         initials: "SB",
     },
     {
+        id: 1,
+        name: "spring boot...",
+        lastMessage: "How to create rest api in spring boot",
+        unread: 2,
+        initials: "SB",
+    },
+    {
         id: 2,
         name: "java...",
         lastMessage: "How to create object in java",
