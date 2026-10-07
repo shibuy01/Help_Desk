@@ -7,21 +7,28 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
 @RestController
-@RequestMapping("api/v1/helpdesk")
+@RequestMapping("/api/v1/helpdesk")
 @RequiredArgsConstructor
-@CrossOrigin("http://localhost:5176/")
+@CrossOrigin(origins = "http://localhost:5173")
 public class AIController {
 
     private final AiService aiService;
 
     @PostMapping
-    public ResponseEntity<String> getResponse(@RequestBody String query, @RequestHeader("ConversationId") String ConversationId) {
-        return ResponseEntity.ok(aiService.getResponseFromAssistant(ConversationId, query));
+    public ResponseEntity<String> getResponse(
+            @RequestBody String query,
+            @RequestHeader("ConversationId") String conversationId) {
+
+        return ResponseEntity.ok(
+                aiService.getResponseFromAssistant(query, conversationId)
+        );
     }
 
     @PostMapping("/stream")
-    public Flux<String> streamResponse(@RequestBody String query, @RequestHeader("ConversationId") String ConversationId) {
-        return this.aiService.streamResponseFromAssistant(ConversationId, query);
-    }
+    public Flux<String> streamResponse(
+            @RequestBody String query,
+            @RequestHeader("ConversationId") String conversationId) {
 
+        return aiService.streamResponseFromAssistant(query, conversationId);
+    }
 }

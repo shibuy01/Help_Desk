@@ -41,13 +41,16 @@ public class AiService {
     }
 
 
-    public Flux<String> streamResponseFromAssistant(String query, @RequestHeader("ConversationId") String ConversationId) {
+    public Flux<String> streamResponseFromAssistant(
+            String query,
+            String conversationId) {
+
         return this.chatClient
                 .prompt()
                 .advisors(advisorSpec ->
                         advisorSpec.param(
                                 ChatMemory.CONVERSATION_ID,
-                                ConversationId
+                                conversationId
                         ))
                 .tools(ticketDatabaseTool, emailTool)
                 .system(systemPromptResource)
