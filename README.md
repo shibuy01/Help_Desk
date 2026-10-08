@@ -1,19 +1,36 @@
 # 🤖 AI Help Desk Assistant
 
 <p align="center">
-  <strong>An AI-powered Help Desk Assistant built with React.js, Spring Boot and Google Gemini AI</strong>
+  <strong>AI-Powered Help Desk Assistant built with React.js, Spring Boot, Spring AI and Google Gemini</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/shibuy01/Help_Desk">
-    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub Repository"/>
+  <a href="https://help-desk-1-12kp.onrender.com">
+    <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-success?style=for-the-badge" alt="Live Demo"/>
   </a>
-  <img src="https://img.shields.io/badge/Java-17%2B-orange?style=for-the-badge&logo=openjdk" alt="Java"/>
-  <img src="https://img.shields.io/badge/Spring%20Boot-4.x-brightgreen?style=for-the-badge&logo=springboot" alt="Spring Boot"/>
-  <img src="https://img.shields.io/badge/React-JS-blue?style=for-the-badge&logo=react" alt="React"/>
-  <img src="https://img.shields.io/badge/AI-Google%20Gemini-4285F4?style=for-the-badge&logo=google" alt="Google Gemini"/>
-  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker" alt="Docker"/>
+  <a href="https://github.com/shibuy01/Help_Desk">
+    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub"/>
+  </a>
 </p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-17%2B-orange?style=for-the-badge&logo=openjdk" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-4.x-brightgreen?style=for-the-badge&logo=springboot" />
+  <img src="https://img.shields.io/badge/React.js-blue?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/Spring%20AI-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker" />
+</p>
+
+---
+
+## 🌐 Live Demo
+
+### 🚀 Live Application
+
+**[👉 Open AI Help Desk Assistant](https://help-desk-1-12kp.onrender.com)**
+
+> The application is deployed on Render and provides an AI-powered chat interface for Help Desk assistance.
 
 ---
 
@@ -21,85 +38,114 @@
 
 **AI Help Desk Assistant** is a full-stack AI-powered customer support application designed to provide intelligent responses to user queries through a modern chat interface.
 
-The application uses a **React.js frontend** for the user interface and a **Spring Boot REST API** on the backend. The backend integrates with **Google Gemini AI** through Spring AI to process user messages and generate helpful responses.
+The application uses a **React.js frontend** for the user interface and a **Spring Boot REST API** on the backend. The backend integrates with **Google Gemini AI** through **Spring AI** to process user messages and generate helpful responses.
 
-The project demonstrates how modern frontend, backend, REST API, AI integration and containerized deployment technologies can be combined to build a real-world application.
+The project demonstrates practical experience with modern **Java backend development, REST APIs, AI integration, frontend-backend communication, Docker, cloud deployment and DevOps concepts**.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 ### 🤖 AI-Powered Assistance
 
-* Ask questions using a conversational chat interface.
-* Generate intelligent responses using Google Gemini AI.
-* Backend handles communication with the AI model.
-* AI API key remains on the backend instead of being exposed to the frontend.
+* Conversational AI-powered Help Desk
+* Google Gemini integration
+* Spring AI integration
+* Intelligent response generation
+* Backend-based AI API integration
+* API key protected through environment variables
 
 ### 💬 Conversational Chat
 
-* Clean and responsive chat interface.
-* User and AI messages are visually separated.
-* Conversation ID support for maintaining conversation context.
-* Loading state while waiting for AI response.
-* Error handling for failed API requests.
+* Modern chat interface
+* User and AI message separation
+* Conversation ID support
+* Loading state
+* Error handling
+* Responsive UI
+* Mobile-friendly design
 
 ### ⚡ REST API
-
-The backend exposes a REST endpoint for processing help-desk conversations.
 
 ```http
 POST /api/v1/helpdesk
 ```
 
-Request:
+Request headers:
 
 ```http
 Content-Type: text/plain
 ConversationId: <unique-conversation-id>
 ```
 
-Body:
+Example request:
 
 ```text
 How can I reset my password?
 ```
 
-Response:
+---
 
-```text
-AI-generated help desk response
-```
+# 🛠️ Technical Skills
 
-### 🎨 Modern Frontend
+## 💻 Programming Languages
+
+* Java
+* SQL
+* JavaScript
+
+## ⚙️ Backend Development
+
+* Spring Boot
+* Spring MVC
+* Spring Security
+* REST API Development
+* Hibernate / JPA
+* JWT Authentication
+* Microservices
+* Exception Handling
+* Layered Architecture
+
+## 🤖 AI & Event-Driven Technologies
+
+* Spring AI
+* Google Gemini
+* Apache Kafka
+* Redis
+* AI API Integration
+
+## 🎨 Frontend Development
 
 * React.js
-* Responsive chat UI
-* Axios API integration
-* Component-based architecture
-* Modern UI components
-* Mobile-friendly design
+* HTML5
+* CSS3
+* Bootstrap
+* Tailwind CSS
+* Axios
 
-### ☕ Spring Boot Backend
+## 🗄️ Databases
 
-* Spring Boot REST API
-* Layered backend architecture
-* Exception handling
-* Request processing
-* AI service integration
-* Environment-based configuration
+* MySQL
+* PostgreSQL
+* MongoDB
 
-### 🐳 Docker Support
+## ☁️ Cloud & DevOps
 
-The backend and frontend are prepared for containerized deployment using Docker.
-
-### ☁️ Cloud Deployment
-
-The project can be deployed using platforms such as:
-
+* AWS EC2
+* Docker
+* CI/CD
 * Render
-* Docker-based hosting
-* Other cloud platforms supporting Java and Node.js applications
+* Git
+* GitHub
+* Maven
+
+## 🧰 Development & API Tools
+
+* IntelliJ IDEA
+* Postman
+* Swagger
+* GitHub
+* Maven
 
 ---
 
@@ -117,7 +163,7 @@ The project can be deployed using platforms such as:
                     │   Help Desk Chat UI   │
                     └───────────┬───────────┘
                                 │
-                           REST API
+                             REST API
                                 │
                                 ▼
                     ┌───────────────────────┐
@@ -127,61 +173,44 @@ The project can be deployed using platforms such as:
                                 │
                                 ▼
                     ┌───────────────────────┐
-                    │      Spring AI       │
+                    │      Spring AI        │
                     └───────────┬───────────┘
                                 │
                                 ▼
                     ┌───────────────────────┐
-                    │    Google Gemini     │
-                    │     AI Model         │
+                    │     Google Gemini     │
+                    │       AI Model        │
                     └───────────┬───────────┘
                                 │
                                 ▼
                     ┌───────────────────────┐
-                    │   AI Generated       │
-                    │      Response        │
+                    │   AI Generated        │
+                    │      Response         │
                     └───────────────────────┘
 ```
 
 ---
 
-# 🛠️ Tech Stack
+# 🧰 Tech Stack
 
-## Frontend
-
-| Technology                   | Purpose             |
-| ---------------------------- | ------------------- |
-| React.js                     | User Interface      |
-| Axios                        | API Communication   |
-| JavaScript                   | Application Logic   |
-| Tailwind CSS / UI Components | Styling             |
-| Vite                         | Frontend Build Tool |
-
-## Backend
-
-| Technology  | Purpose                        |
-| ----------- | ------------------------------ |
-| Java        | Backend Development            |
-| Spring Boot | REST API                       |
-| Spring AI   | AI Integration                 |
-| Maven       | Dependency Management          |
-| REST API    | Frontend-Backend Communication |
-
-## AI
-
-| Technology             | Purpose                |
-| ---------------------- | ---------------------- |
-| Google Gemini          | AI Response Generation |
-| Spring AI Google GenAI | Gemini Integration     |
-
-## DevOps
-
-| Technology | Purpose                |
-| ---------- | ---------------------- |
-| Docker     | Containerization       |
-| Git        | Version Control        |
-| GitHub     | Source Code Management |
-| Render     | Cloud Deployment       |
+| Category         | Technologies                                 |
+| ---------------- | -------------------------------------------- |
+| Language         | Java, SQL, JavaScript                        |
+| Backend          | Spring Boot, Spring MVC, Spring Security     |
+| API              | REST API, Swagger                            |
+| ORM              | Hibernate, JPA                               |
+| Security         | JWT, Spring Security                         |
+| AI               | Spring AI, Google Gemini                     |
+| Messaging        | Apache Kafka                                 |
+| Caching          | Redis                                        |
+| Frontend         | React.js, HTML, CSS, Bootstrap, Tailwind CSS |
+| Database         | MySQL, PostgreSQL, MongoDB                   |
+| Build Tool       | Maven                                        |
+| Containerization | Docker                                       |
+| Cloud            | AWS EC2, Render                              |
+| CI/CD            | CI/CD Pipelines                              |
+| Version Control  | Git, GitHub                                  |
+| Testing/API      | Postman                                      |
 
 ---
 
@@ -193,19 +222,13 @@ The project can be deployed using platforms such as:
 
 ![Help Desk Chat](./screenshots/chat-screen.png)
 
----
-
 ## 🤖 AI Response
 
 ![AI Response](./screenshots/ai-response.png)
 
----
-
 ## 📱 Responsive UI
 
 ![Responsive UI](./screenshots/mobile-view.png)
-
----
 
 ## 🔌 API Testing
 
@@ -219,19 +242,15 @@ The project can be deployed using platforms such as:
 Help_Desk/
 │
 ├── help-desk-backend/
-│   │
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/
 │   │   │   └── resources/
-│   │   │
 │   │   └── test/
-│   │
 │   ├── pom.xml
 │   └── Dockerfile
 │
 ├── helpdesk-frontend/
-│   │
 │   ├── src/
 │   ├── public/
 │   ├── package.json
@@ -253,7 +272,7 @@ Help_Desk/
 
 ## Prerequisites
 
-Before running the project, install:
+Install the following:
 
 * Java 17+
 * Maven
@@ -273,13 +292,13 @@ Clone the repository:
 git clone https://github.com/shibuy01/Help_Desk.git
 ```
 
-Go to the backend:
+Go to backend:
 
 ```bash
 cd Help_Desk/help-desk-backend
 ```
 
-Set your Gemini API key as an environment variable.
+Set Gemini API key.
 
 ### Windows PowerShell
 
@@ -287,13 +306,13 @@ Set your Gemini API key as an environment variable.
 $env:GEMINI_API_KEY="your_gemini_api_key"
 ```
 
-Run the Spring Boot application:
+Run:
 
 ```bash
 mvn spring-boot:run
 ```
 
-Backend will run on:
+Backend:
 
 ```text
 http://localhost:8080
@@ -302,8 +321,6 @@ http://localhost:8080
 ---
 
 # 🎨 Frontend Setup
-
-Open another terminal:
 
 ```bash
 cd Help_Desk/helpdesk-frontend
@@ -315,13 +332,13 @@ Install dependencies:
 npm install
 ```
 
-Start the development server:
+Start:
 
 ```bash
 npm run dev
 ```
 
-Frontend will normally run on:
+Frontend:
 
 ```text
 http://localhost:5173
@@ -331,23 +348,19 @@ http://localhost:5173
 
 # 🔐 Environment Variables
 
-Never commit API keys or passwords to GitHub.
-
-Example:
+Never commit secrets to GitHub.
 
 ```properties
 GEMINI_API_KEY=your_gemini_api_key
 ```
 
-For production deployment, configure secrets through the hosting platform's environment-variable settings.
-
-> ⚠️ Do not put your real Gemini API key directly inside `application.properties`, Java source code or React code.
+For production, configure environment variables through the hosting platform.
 
 ---
 
-# 🐳 Running with Docker
+# 🐳 Docker
 
-Build the backend:
+Build backend:
 
 ```bash
 docker build -t help-desk-backend ./help-desk-backend
@@ -361,7 +374,7 @@ docker run -p 8080:8080 \
   help-desk-backend
 ```
 
-For the frontend:
+Build frontend:
 
 ```bash
 docker build -t help-desk-frontend ./helpdesk-frontend
@@ -372,23 +385,21 @@ docker build -t help-desk-frontend ./helpdesk-frontend
 # 🔄 Application Flow
 
 ```text
-1. User opens Help Desk
-          ↓
-2. React application loads
-          ↓
-3. User enters a question
-          ↓
-4. Axios sends POST request
-          ↓
-5. Spring Boot receives request
-          ↓
-6. Backend sends prompt to Gemini
-          ↓
-7. Gemini generates response
-          ↓
-8. Backend returns AI response
-          ↓
-9. React displays response
+User
+  ↓
+React Frontend
+  ↓
+Axios
+  ↓
+Spring Boot REST API
+  ↓
+Spring AI
+  ↓
+Google Gemini
+  ↓
+AI Response
+  ↓
+React Chat UI
 ```
 
 ---
@@ -410,13 +421,13 @@ Content-Type: text/plain
 ConversationId: 123456
 ```
 
-### Request Body
+### Request
 
 ```text
 Hello, I am unable to access my account.
 ```
 
-### Example cURL
+### cURL
 
 ```bash
 curl -X POST http://localhost:8080/api/v1/helpdesk \
@@ -433,7 +444,8 @@ The backend API can be tested using:
 
 * Postman
 * cURL
-* Browser-based frontend
+* React frontend
+* Swagger
 
 Example:
 
@@ -441,69 +453,92 @@ Example:
 POST http://localhost:8080/api/v1/helpdesk
 ```
 
-Headers:
+---
+
+# ☁️ Deployment
+
+## Live Application
+
+**Frontend / Application:**
+
+https://help-desk-1-12kp.onrender.com
+
+The project is deployed using **Render** with Docker-based deployment.
+
+### Deployment Architecture
 
 ```text
-Content-Type: text/plain
-ConversationId: test-123
+                   Internet
+                      │
+                      ▼
+             ┌─────────────────┐
+             │ React Frontend  │
+             └────────┬────────┘
+                      │
+                   REST API
+                      │
+                      ▼
+             ┌─────────────────┐
+             │ Spring Boot API │
+             └────────┬────────┘
+                      │
+                      ▼
+                ┌───────────┐
+                │ Spring AI │
+                └─────┬─────┘
+                      │
+                      ▼
+               Google Gemini
 ```
 
 ---
 
-# 🚀 Deployment
+# 🚀 CI/CD & DevOps
 
-The application can be deployed as separate frontend and backend services.
+The project is designed around modern development and deployment practices:
 
-```text
-                 Production
-                     │
-          ┌──────────┴──────────┐
-          │                     │
-          ▼                     ▼
-   React Frontend         Spring Boot Backend
-          │                     │
-          │                     ▼
-          │                Spring AI
-          │                     │
-          │                     ▼
-          │               Google Gemini
-          │
-          └────── REST API ─────┘
-```
-
-### Frontend
-
-Deploy the React application as a static site or Docker service.
-
-### Backend
-
-Deploy the Spring Boot application as a Docker/Web Service.
-
-Configure:
-
-```text
-GEMINI_API_KEY
-```
-
-in the backend hosting environment.
+* Git version control
+* GitHub repository management
+* Docker containerization
+* CI/CD concepts
+* Render deployment
+* AWS EC2 deployment knowledge
+* Environment-based configuration
+* Production deployment
 
 ---
 
-# 🛡️ Security Considerations
+# 🔥 Microservices & Distributed Systems Skills
 
-* API keys should be stored as environment variables.
-* Never expose the Gemini API key in React.
-* Never commit `.env` files containing secrets.
-* Configure CORS for trusted frontend domains.
-* Validate incoming API requests.
-* Add rate limiting before production use.
-* Use HTTPS in production.
+Along with this Help Desk application, the developer has experience working with:
+
+* Spring Boot Microservices
+* Service-to-service communication
+* API Gateway
+* Service Discovery
+* Apache Kafka
+* Redis
+* Spring Security
+* JWT Authentication
+* Docker
+* AWS EC2
+* CI/CD
+
+---
+
+# 🛡️ Security
+
+* API keys stored using environment variables
+* Spring Security
+* JWT Authentication
+* CORS configuration
+* Request validation
+* Secure backend API integration
+* HTTPS recommended for production
 
 ---
 
 # 🔮 Future Improvements
-
-The current project can be extended into a complete enterprise Help Desk platform.
 
 ### 🎫 Ticket Management
 
@@ -518,23 +553,21 @@ The current project can be extended into a complete enterprise Help Desk platfor
 
 * Admin dashboard
 * Support agent dashboard
-* Assign tickets to agents
+* Assign tickets
 * Agent availability
 * Ticket statistics
 
 ### 🤖 Advanced AI
 
-* AI-based ticket classification
+* AI ticket classification
 * Automatic priority detection
-* AI-generated ticket summaries
+* AI-generated summaries
 * Suggested solutions
 * Sentiment analysis
 * Automatic ticket routing
 * FAQ-based responses
 
 ### 💾 Database
-
-Add persistent storage for:
 
 * Users
 * Conversations
@@ -545,25 +578,12 @@ Add persistent storage for:
 
 ### 🔐 Authentication
 
-Add:
-
 * Spring Security
 * JWT Authentication
 * Role-Based Access Control
 * Admin / Agent / Customer roles
 
-### 📧 Notifications
-
-Add:
-
-* Email notifications
-* Ticket assignment emails
-* Ticket resolution emails
-* Password reset emails
-
 ### 📊 Analytics
-
-Add dashboard charts for:
 
 * Total tickets
 * Open tickets
@@ -574,55 +594,32 @@ Add dashboard charts for:
 
 ---
 
-# 📈 Future Architecture
-
-```text
-                         ┌─────────────────┐
-                         │  React Frontend │
-                         └────────┬────────┘
-                                  │
-                                  ▼
-                         ┌─────────────────┐
-                         │  API Gateway    │
-                         └────────┬────────┘
-                                  │
-                 ┌────────────────┼────────────────┐
-                 │                │                │
-                 ▼                ▼                ▼
-          User Service      Ticket Service    AI Service
-                 │                │                │
-                 │                ▼                ▼
-                 │             MySQL          Gemini AI
-                 │
-                 ▼
-             MySQL DB
-
-                         ┌─────────────────┐
-                         │ Notification    │
-                         │ Service         │
-                         └─────────────────┘
-```
-
----
-
 # 🎯 Why This Project?
 
 This project demonstrates practical experience with:
 
 * Full-stack development
-* React.js
 * Java
 * Spring Boot
+* Spring Security
 * REST API development
 * Spring AI
-* Google Gemini integration
-* API integration
-* Error handling
+* Google Gemini
+* React.js
+* Microservices
+* Apache Kafka
+* Redis
+* MySQL / PostgreSQL
 * Docker
+* AWS EC2
+* CI/CD
 * Cloud deployment
+* Git & GitHub
 * Frontend-backend integration
 
-It can be used as a portfolio project for **Java Backend Developer / Spring Boot Developer / Full Stack Developer** roles.
+This project is suitable as a portfolio project for:
+
+**Java Backend Developer | Spring Boot Developer | Software Engineer | Full Stack Developer**
 
 ---
 
@@ -630,7 +627,7 @@ It can be used as a portfolio project for **Java Backend Developer / Spring Boot
 
 ## Shibu Kumar
 
-Java Backend Developer | Spring Boot Developer
+**Java Backend Developer | Spring Boot Developer**
 
 ### Skills
 
@@ -638,25 +635,40 @@ Java Backend Developer | Spring Boot Developer
 Java
 Spring Boot
 Spring Security
+Spring MVC
 Spring Data JPA
 Hibernate
 REST APIs
+JWT
+Microservices
+Spring AI
+Google Gemini
+Apache Kafka
+Redis
 MySQL
+PostgreSQL
 React.js
 JavaScript
 Docker
+AWS EC2
+CI/CD
 Git & GitHub
-AI Integration
-Google Gemini
+Maven
+Postman
+Swagger
 ```
 
 ### GitHub
 
-[github.com/shibuy01](https://github.com/shibuy01)
+https://github.com/shibuy01
 
 ### Project Repository
 
-[github.com/shibuy01/Help_Desk](https://github.com/shibuy01/Help_Desk)
+https://github.com/shibuy01/Help_Desk
+
+### Live Demo
+
+https://help-desk-1-12kp.onrender.com
 
 ---
 
@@ -667,5 +679,5 @@ If you find this project useful, consider giving the repository a ⭐ on GitHub.
 ---
 
 <p align="center">
-  Built with ❤️ using Java, Spring Boot, React.js and Google Gemini AI
+  Built with ❤️ using Java, Spring Boot, React.js, Spring AI and Google Gemini
 </p>
